@@ -1,5 +1,6 @@
 import express from 'express';
 import { PrismaClient } from '@prisma/client';
+import { auth } from '../middlewares/auth.js';
 
 const router = express.Router();
 const prisma = new PrismaClient();
@@ -33,7 +34,7 @@ router.post('/scoreTop', async (req, res) => {
   }
 });
 
-router.get('/scoreTop', async (req, res) => {
+router.get('/scoreTop', auth , async (req, res) => {
   try {
     const topPlayers = await prisma.player.findMany({
       orderBy: {

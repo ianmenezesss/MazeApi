@@ -3,7 +3,7 @@ import cors from 'cors';
 import scoreRouter from './routes/scoreboard.js';
 
 const corsOptions = {
-  origin: ['http://localhost:5173', 'https://maze-phi-six.vercel.app'],
+  origin: ['http://localhost:5173', 'https://maze-phi-six.vercel.app','https://maze-game-av3.vercel.app'],
   methods: ['GET', 'POST'],
   allowedHeaders: ['Content-Type', 'Authorization'],
 };
