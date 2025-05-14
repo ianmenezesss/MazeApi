@@ -12,3 +12,15 @@ model Player {
   name  String
   score Int
 }
+
+model User{
+  id    String  @id @default(auto()) @map("_id") @db.ObjectId
+  name  String  @unique
+  senha String
+}
+
+model Nivel{
+  id    String  @id @default(auto()) @map("_id") @db.ObjectId
+  name  String
+  nivel Int
+}
