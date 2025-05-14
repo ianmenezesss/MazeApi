@@ -35,7 +35,7 @@ router.post('/scoreNivel', async (req, res) => {
     }
 })
 
-router.get('/scoreNivel' , auth , async (req, res) => {
+router.get('/scoreNivel' , async (req, res) => {
     try {
         const topPlayers = await prisma.nivel.findMany({
             orderBy: {
